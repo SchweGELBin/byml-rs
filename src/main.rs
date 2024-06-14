@@ -24,7 +24,7 @@ fn convert(full_path: &str) {
         let text = Byml::from_text(&file).unwrap();
         std::fs::write(
             format!("{}.byml", path.0),
-            text.to_binary(Endian::Little, 4).unwrap(),
+            text.to_binary(Endian::Little, 3).unwrap(),
         )
         .unwrap();
     }
